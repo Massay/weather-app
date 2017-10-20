@@ -1,0 +1,3 @@
+// interface Whether {
+//   base:stri
+// }

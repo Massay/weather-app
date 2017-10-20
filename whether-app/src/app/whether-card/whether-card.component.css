@@ -1,0 +1,41 @@
+
+span{
+  display: block;
+
+}
+
+
+.wh-info{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+
+img{
+  width: 200px;
+  height: 200px;
+}
+.main-title{
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1.5;
+}
+.sub-title{
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: lighter;
+
+}
+
+.wh-content-info{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.wh-content-info span{
+  font-weight: bolder;
+  font-size: 102px;
+  line-height: 1.5;
+  word-spacing: 5;
+}

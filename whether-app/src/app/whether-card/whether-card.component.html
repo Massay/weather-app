@@ -1,0 +1,55 @@
+<div class="" *ngIf="!w">
+      <h4 class="text-center">Not Displaying Weather Result</h4>
+</div>
+
+<div *ngIf="w" class="row">
+<div class="card col-md-12">
+  <div class="card-header">
+      <div class="wh-info">
+          <div class="wh-api-info">
+              <h1>{{w.name}}</h1>
+              <span class="main-title">{{w?.weather[0].main}}</span>
+              <span class="sub-title">{{w.weather[0].description}}</span>
+          </div>
+          <img  src="http://download.spinetix.com/content/widgets/icons/weather/{{w.weather[0].icon}}.png" alt="">
+      </div>
+
+      <a href="#" class="badge badge-danger">{{w.sys.sunrise * 1000 | date:'medium'}}</a>
+      <a href="#" class="badge badge-secondary">{{w.sys.sunset * 1000 | date: 'medium'}}</a>
+  </div>
+  <div class="card-body">
+     <div class="wh-content-info">
+
+                <span>{{w.main.temp}} C</span>
+
+            <div class="content-summary">
+                  <h4 class="text-center">Details</h4>
+                  <table class="table">
+                      <tbody>
+                          <tr>
+                              <td>Feels Like</td>
+                              <td>{{w.main.temp}} C</td>
+                          </tr>
+                          <tr>
+                              <td>Wind</td>
+                              <td>{{w.wind.speed}}</td>
+                          </tr>
+                          <tr>
+                              <td>Humidity</td>
+                              <td>{{w.main.humidity}}</td>
+                          </tr>
+                          <tr>
+                              <td>Precip</td>
+                              <td>-</td>
+                          </tr>
+                          <tr>
+                              <td>Pressure</td>
+                              <td>{{w.main.pressure}} pHa</td>
+                          </tr>
+                      </tbody>
+                  </table>
+            </div>
+     </div>
+  </div>
+</div>
+</div>
